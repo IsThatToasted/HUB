@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(../painting.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.login-box {
+  width: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.login-box h1 {
+  font-size: 40px;
+  border-bottom: 6px solid #4caf50;
+  margin-bottom: 50px;
+  padding: 13px 0;
+}
+
+.text-box {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #4caf50;
+}
+
+.text-box i {
+  width: 26px;
+  float: left;
+  text-align: center;
+}
+
+.text-box input {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 0 10px;
+}
+
+.btn {
+  width: 100%;
+  background: linear-gradient(to right, #4caf50, #3e8e41);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

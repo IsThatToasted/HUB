@@ -1,0 +1,62 @@
+"use strict";
+
+
+/* ===== Stickyfill ===== */
+/* Ref: https://github.com/wilddeer/stickyfill */
+// Add browser support to position: sticky
+
+var elements = document.querySelectorAll('.sticky');
+Stickyfill.add(elements);
+
+/* ===== Gumshoe SrollSpy ===== */
+/* Ref: https://github.com/cferdinandi/gumshoe  */
+// Initialize Gumshoe
+var spy = new Gumshoe('#doc-nav a', {
+	offset: 0 
+});
+
+
+
+
+
+/* ====== SimpleLightbox Plugin ======= */
+/*  Ref: https://github.com/andreknieriem/simplelightbox */
+var lightbox = new SimpleLightbox('.simplelightbox-gallery-1 a', { /* options */ });
+var lightbox = new SimpleLightbox('.simplelightbox-gallery-2 a', {/* options */});
+var lightbox = new SimpleLightbox('.simplelightbox-gallery-3 a', {/* options */});
+var lightbox = new SimpleLightbox('.simplelightbox-gallery-4 a', {/* options */});
+var lightbox = new SimpleLightbox('.simplelightbox-gallery-5 a', {/* options */});
+var lightbox = new SimpleLightbox('.simplelightbox-gallery-6 a', {/* options */});
+var lightbox = new SimpleLightbox('.simplelightbox-gallery-7 a', {/* options */});
+
+function searchPage() {
+    const searchInput = document.querySelector('.search-input');
+    const searchText = searchInput.value;
+    const pageElements = document.querySelectorAll('body *');
+    
+    pageElements.forEach(function(element) {
+        if (element.textContent.includes(searchText)) {
+            element.style.backgroundColor = 'yellow';
+        } else {
+            element.style.backgroundColor = '';
+        }
+    });
+}
+
+const searchBtn = document.querySelector('.search-btn');
+searchBtn.addEventListener('click', searchPage);
+
+
+
+const toggleSidebar = document.querySelector('.toggle-sidebar');
+const sidebar = document.querySelector('.sidebar');
+const sidebarBump = document.querySelector('.sidebar-bump');
+
+toggleSidebar.addEventListener('click', function(e) {
+  e.preventDefault();
+  sidebar.classList.toggle('active');
+});
+
+sidebarBump.addEventListener('click', function() {
+  sidebar.classList.add('active');
+});

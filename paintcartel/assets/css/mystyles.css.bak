@@ -1,0 +1,44 @@
+.thumbtitle {
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}
+
+/* left navigation container */
+.leftnav {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  height: 100%;
+  width: 200px;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+
+/* header of the navigation */
+.leftnav-header {
+  padding: 20px;
+  cursor: pointer;
+}
+
+/* navigation links */
+.leftnav a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+/* hide the navigation by default */
+.leftnav.collapsed {
+  left: -200px;
+}
+
+/* show the navigation when .show class is added */
+.leftnav.show {
+  left: 0;
+}
+
+.leftnav.collapsed {
+  left: -200px;
+}

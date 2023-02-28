@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>425652-20 - AWI Lower</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+<div class="page">
+<body class="body-purple">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Paint</span><span class="text-bold">Cartel</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Project Overview - AWI Lower</li>
+                </ol>
+                <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+	            
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+			            
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+			            
+			        </form>
+                </div>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_lifesaver"></span> Project Overview - AWI Lower</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Feb 6, 2023</div>
+                </div><!--//doc-header-->
+				
+				
+				<div>	
+				<center>
+				<h1 class="doc-title"><span>Phase 2 - North Side</span></h1>
+				</center>
+                <div>
+					<canvas id="myChart"></canvas>
+				</div>
+				<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+				<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Walls(Pure-White)', 'Walls(Accent-1)', 'Walls(Accent-2)', 'Cieling', 'Trim', 'Doors'],
+      datasets: [{
+        label: 'Percentage Complete',
+        data: [90, 100, 90, 100, 80, 75],
+        borderWidth: 1
+      }]
+    },
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            }
+        }
+    }
+});
+</script>
+</div>	
+
+
+<div>	
+<br>
+<p></p>
+<hr>
+<center>
+				<h1 class="doc-title"><span>Phase 2 - South Side</span></h1>
+				</center>
+                <div>
+					<canvas id="myChart2"></canvas>
+				</div>
+				<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+				<script>
+  const ctx2 = document.getElementById('myChart2');
+
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['Walls(Pure-White)', 'Walls(Accent-1)', 'Walls(Accent-3)', 'Cieling', 'Trim', 'Doors'],
+      datasets: [{
+        label: 'Percentage Complete',
+        data: [90, 50, 0, 70, 70, 60],
+        borderWidth: 1
+      }]
+    },
+    options: {
+        plugins: {
+            title: {
+                display: true,
+                text: ''
+            }
+        }
+    }
+});
+</script>
+		</div>		
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+                </div><!--//promo-block-inner--> 
+<hr>				
+<br>
+<p style= 'text-align: center; font-size: 30px;', >How many total hours for this job?</p>
+<p style= 'text-align: center; font-size: 15px;'>There were 1,000 hours given initially for the scope of work.</p>
+
+<p style= 'text-align: center; font-size: 30px;', >Are there additional change orders?</p>
+<p style= 'text-align: center; font-size: 15px;'>Yes there are multiple change orders already signed as well as additional that are processed daily. The total sum</p>
+
+
+
+
+
+            </div><!--//container-->
+			
+        </div><!--//promo-block-->
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Brian Chambers for the PaintCartel</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/prism/prism.js"></script>      
+    <script src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>                                                          
+    <script src="assets/js/main.js"></script>
+    </div>
+</body>
+</html> 
+

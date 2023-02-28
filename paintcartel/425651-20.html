@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>425652-20 - AWI Lower</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+	 <link rel="stylesheet" href="assets/css/mystyles.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+	  
+</head> 
+<body class="body-purple">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+		
+		
+	
+
+		
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+					
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Paint</span><span class="text-bold">Cartel</span>
+                        </a>
+                    </h1>
+				
+					
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Project Overview - JEM/CHOP</li>
+                </ol>
+                <div class="top-search-box">
+				<div id="displayDiv"></div>
+				
+<form class="form-inline search-form justify-content-center" action="" method="get">
+  <input type="text" id="search-input" placeholder="Search..." class="form-control search-input">
+  <button type="submit" class="btn search-btn" value="Search" onclick="searchElements()"><i class="fas fa-search"></i></button>
+</form>
+
+	<script>
+ // Get the input element and the target container
+const searchInput = document.getElementById("search-input");
+const container = document.getElementById("container");
+
+// Attach an event listener to the input element to listen for changes
+searchInput.addEventListener("input", function() {
+  // Get the search term
+  const searchTerm = searchInput.value.toLowerCase();
+
+  // Loop through all the elements in the container
+  for (let i = 0; i < container.children.length; i++) {
+    const element = container.children[i];
+
+    // Check if the element text contains the search term
+    if (element.textContent.toLowerCase().indexOf(searchTerm) !== -1) {
+      // If it does, scroll to the element
+      element.scrollIntoView();
+      break;
+    }
+  }
+});
+</script>
+					
+                </div>
+            </div><!--//container-->
+        </header><!--//header-->
+		
+        <div class="doc-wrapper">
+		
+            <div class="container">
+			
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_lifesaver"></span> Project Overview - JEM/CHOP</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Feb 6, 2023</div>
+                </div><!--//doc-header-->	
+				
+				
+				
+				
+				
+				
+<div>
+	<canvas id="myChart"></canvas>
+</div>
+<style>
+  #myChart {
+    height: 400px;
+  }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart');
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Walls(Pure-White)', 'Walls(Accent-1)', 'Walls(Accent-2)', 'Cieling', 'Trim', 'Doors'],
+datasets: [{
+label: 'Percentage Complete',
+data: [0, 0, 0, 0, 0, 0],
+borderWidth: 1
+}]
+},
+options: {
+responsive: true,
+maintainAspectRatio: false,
+plugins: {
+title: {
+display: true,
+text: ''
+}
+}
+}
+});
+</script>	
+				
+				<hr>				
+
+
+
+
+                                <div class="section-block" name= "photos">
+	                                                                    <div class="callout-block callout-info">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-bullhorn"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Important Documents</h4>
+                                            <p>Click the image to enlarge.</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-->
+                                    <div class="row simplelightbox-gallery-1">
+                                        <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6 class="thumbtitle">Important Note from Architect</h6>
+                                            <p>Registration Desk Change Order</p>
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/registrationdesk.png" ><img class="img-fluid" src="assets/images/registrationdeskthumb.png" alt="screenshot" /></a>
+                                            </div> 
+                                        </div>
+                                         <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6 class="thumbtitle">Important Safety Information</h6>
+                                            <p>Pleae Read Before Entering</p>
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/safety.png" ><img class="img-fluid" src="assets/images/safetythumb.png" alt="screenshot" /></a>
+                                                
+                                            </div> 
+                                        </div>
+                                        <div class="clearfix"></div>
+                                         <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6 class="thumbtitle">Takeoff 1</h6>
+                                            <p>Takeoff Information</p>
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/takeoff1.png"><img class="img-fluid" src="assets/images/takeoff1thumb.png" alt="screenshot" /></a>
+                                                
+                                            </div> 
+                                        </div>
+                                         <div class="col-md-6 col-sm-12 col-sm-12">
+                                            <h6 class="thumbtitle">Takeoff 2</h6>
+                                            <p>Takeoff Information</p>
+                                            <div class="screenshot-holder">
+                                                <a href="assets/images/takeoff2.png"><img class="img-fluid" src="assets/images/takeoff2thumb.png" alt="screenshot" /></a>
+                                                
+                                            </div> 
+                                        </div>
+                                    </div><!--//row-->
+                                </div><!--//section-block-->
+                                
+                            </section><!--//doc-section-->
+
+
+
+
+
+
+<b><p style= 'text-align: Left; font-size: 30px;', >Scheduling Restrictions:</p></b>
+<p style= 'text-align: Left; font-size: 15px;'>The scope specifies for painting to be completed within the timeframe of <b>Tue 3/21/23 to Mon 4/3/23</b>, totalling 10 days. Also specified within the scope are return dates of <b>Tue 6/27/23 to Thu 6/29/23</b> for touch ups and/or cleaning.</p>
+<br>
+
+		</pre>		
+                </div><!--//promo-block-inner--> 
+
+            </div><!--//container-->
+			
+        </div><!--//promo-block-->
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Brian Chambers for the PaintCartel</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/prism/prism.js"></script>      
+    <script src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>                                                          
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
+

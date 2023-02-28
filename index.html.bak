@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>PaintCartel Login</title>
+  </head>
+  <body background="painting.jpg">
+    <div class="login-box">
+      <h1>Login</h1>
+  
+      <form action="../php/login.php" method="post">
+        <div class="text-box">
+          <i class="fas fa-user"></i>
+          <input type="text" name="username" placeholder="Username" autocomplete="off">
+        </div>
+
+        <div class="text-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Password" autocomplete="off">
+        </div>
+
+        <input type="submit" class="btn" value="Sign In">
+      </form>
+    </div>
+  </body>
+  <footer>
+      <p>If you cannot login, please contact the administrator.</p>
+    </footer>
+</html>

@@ -1,0 +1,13 @@
+<?php
+session_start();
+$username = $_POST['username'];
+$password = $_POST['password'];
+if ($username == "TwoDudes" && $password == "password") {
+  $_SESSION['logged_in'] = true;
+  header("Location: ../php/welcome.php");
+  exit;
+} else {
+  $_SESSION['error_message'] = "Incorrect username or password.";
+  header("Location: ../index.html");
+  exit;
+}

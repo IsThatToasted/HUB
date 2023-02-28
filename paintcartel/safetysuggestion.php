@@ -1,0 +1,137 @@
+<?php 
+	require "../functions.php";
+	require "../header.php";
+	
+	
+	if(!isset($_SESSION['user'])){
+		header("location: ../login.php");
+		exit();
+	}
+
+	if(isset($_GET['logout'])){
+		logoutUser();
+	}
+	
+	if(isset($_GET['confirm-account-deletion'])){
+		deleteAccount();
+	}
+
+	if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['title']) && isset($_POST['suggestion'])) {
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$title = $_POST['title'];
+		$suggestion = $_POST['suggestion'];
+
+		$file = 'safetySuggestions/suggestions.json';
+		if(file_exists($file)) {
+			$data = json_decode(file_get_contents($file), true);
+		} else {
+			$data = array();
+		}
+		$data[] = array(
+			'name' => $name,
+			'email' => $email,
+			'title' => $title,
+			'suggestion' => $suggestion
+		);
+		file_put_contents($file, json_encode($data));
+	}
+?>
+<html>
+<head>
+
+	<title>Safety Suggestions</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1>Safety Suggestions</h1>
+		<hr>
+		<p>Please submit your safety suggestion to be displayed!</p>
+		<form method="POST">
+			<div class="form-group">
+				<label for="name">Your Name:</label>
+				<input type="text" class="form-control" id="name" name="name">
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" name="email">
+			</div>
+			<div class="form-group">
+				<label for="title">Title:</label>
+				<input type="text" class="form-control" id="title" name="title">
+			</div>
+			<div class="form-group">
+				<label for="suggestion">Suggestion Summary:</label>
+				<textarea class="form-control" id="suggestion" rows="10" name="suggestion"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Send Suggestion</button>
+		</form>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+
+	<table class="table table-striped">
+	  <thead>
+	    <tr>
+	      <th scope="col">Name</th>
+	      <th scope="col">Email</th>
+	      <th scope="col">Title</th>
+	      <th scope="col">Suggestion Summary</th>
+		  <th scope="col">Delete</th>
+		  
+		  
+	    </tr>
+	  </thead>
+	  <tbody>
+
+		
+	  </tbody>
+	      <?php 
+      // Read the contents of the JSON file
+      $jsonData = file_get_contents('safetySuggestions/suggestions.json');
+
+      // Parse the JSON data as an array
+      $suggestions = json_decode($jsonData, true);
+
+      // Loop through the suggestions and output each row in the table
+      foreach ($suggestions as $index => $suggestion) {
+        echo '<tr>';
+        echo '<td>' . $suggestion['name'] . '</td>';
+        echo '<td>' . $suggestion['email'] . '</td>';
+        echo '<td>' . $suggestion['title'] . '</td>';
+        echo '<td>' . $suggestion['suggestion'] . '</td>';
+        echo '<td>
+                <form method="POST">
+                  <input type="hidden" name="index" value="' . $index . '">
+                  <button type="submit" name="delete" class="btn btn-danger">Delete</button>
+                </form>
+              </td>';
+        echo '</tr>';
+      }
+
+      // Handle the deletion logic when the delete button is clicked
+      if (isset($_POST['delete'])) {
+        // Get the suggestion index from the form data
+        $index = $_POST['index'];
+
+        // Remove the suggestion from the array
+        unset($suggestions[$index]);
+
+        // Encode the array back to JSON
+        $jsonData = json_encode($suggestions, JSON_PRETTY_PRINT);
+
+        // Write the JSON data to the file
+        file_put_contents('safetySuggestions/suggestions.json', $jsonData);
+      }
+    ?>
+	</table>
+</body>
+
+	<?php 
+		require "footer.php";
+	?>
+</html>

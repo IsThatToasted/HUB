@@ -1,0 +1,6 @@
+<footer id="footer" class="footer text-center">
+        <div class="container">
+		<small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Brian Chambers for the PaintCartel</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
